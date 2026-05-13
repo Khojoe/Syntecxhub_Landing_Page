@@ -38,7 +38,7 @@
         </button>
 
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden text-3xl text-gray-700">
+        <button id="mobile-menu-btn" class="md:hidden text-3xl text-gray-700" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
           <i class="fa-solid fa-bars"></i>
         </button>
       </div>
@@ -51,7 +51,7 @@
         <a href="#features" class="nav-link">Features</a>
         <a href="#pricing" class="nav-link">Pricing</a>
         <a href="#contact" class="nav-link">Contact</a>
-        <button class="cta-btn bg-violet-600 text-white py-5 rounded-3xl font-semibold text-lg">Get Early
+        <button id="mobile-cta-btn" class="cta-btn bg-violet-600 text-white py-5 rounded-3xl font-semibold text-lg">Get Early
           Access</button>
       </div>
     </div>
@@ -81,7 +81,7 @@
             class="cta-btn bg-white text-violet-700 px-10 py-5 rounded-3xl text-xl font-semibold flex items-center gap-3">
             Start Building Free <span class="text-2xl">→</span>
           </button>
-          <button
+          <button onclick="alert('Video player would open here!')"
             class="border-2 border-white/70 hover:border-white px-8 py-5 rounded-3xl text-xl font-medium transition-all">
             Watch 1:42 min
           </button>
@@ -205,14 +205,17 @@
       <h2 class="text-5xl font-bold mb-6">Let's build something amazing together</h2>
       <p class="text-2xl text-gray-600 mb-10">Join the waitlist and get early access + exclusive templates.</p>
 
-      <form class="max-w-md mx-auto space-y-6">
-        <input type="email" placeholder="your@email.com"
+      <form id="waitlist-form" class="max-w-md mx-auto space-y-6">
+        <input type="email" id="email-input" placeholder="your@email.com" required
           class="w-full px-8 py-6 rounded-3xl border focus:outline-none focus:border-violet-500 text-lg">
-        <button type="button" onclick="alert('Thank you! Demo form submitted.')"
+        <button type="submit"
           class="cta-btn w-full bg-violet-600 text-white py-6 rounded-3xl text-xl font-semibold">
           Join the Waitlist — It's Free
         </button>
       </form>
+      <div id="form-success" class="hidden mt-6 text-emerald-600 font-semibold text-lg">
+        🎉 Thank you! You've been added to the waitlist.
+      </div>
 
       <p class="text-sm text-gray-500 mt-8">❤️ Made with passion for this internship project</p>
     </div>
